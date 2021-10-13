@@ -1,14 +1,14 @@
 class SignInUser < Avram::Operation
   param_key :user
   # You can modify this in src/operations/mixins/user_from_email.cr
-  include UserFromEmail
+  include UserFromuserid
 
-  attribute email : String
+  attribute userid : String
   attribute password : String
 
   # Run validations and yields the operation and the user if valid
   def run
-    user = user_from_email
+    user = user_from_userid
     validate_credentials(user)
 
     if valid?
