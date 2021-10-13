@@ -9,7 +9,7 @@ class User < BaseModel
     preferences : String
     token : String
     watched : String[]
-    feed_needs_update : Boolean
+    feed_needs_update : Bool
     column admin : Bool = false
   end
 end
