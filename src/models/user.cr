@@ -10,5 +10,6 @@ class User < BaseModel
     token : String
     watched : String[]
     feed_needs_update : Boolean
+    column admin : Bool = false
   end
 end
