@@ -1,19 +1,19 @@
 databases:
-  - name: Lucky Jumpstart Primary
-    databaseName: lucky_jumpstart
-    user: lucky_jumpstart
+  - name: Invidious Lucky Prototype Primary
+    databaseName: invidious_lucky_prototype
+    user: invidious_lucky_prototype
     ipAllowList: []
 
 services:
   - type: web
-    name: Lucky Jumpstart
+    name: Invidious Lucky Prototype
     env: docker
     dockerfilePath: "./dockerfiles/webserver.Dockerfile"
     healthCheckPath: /
     envVars:
       - key: DATABASE_URL
         fromDatabase:
-          name: Lucky Jumpstart Primary
+          name: Invidious Lucky Prototype Primary
           property: connectionString
       - key: LUCKY_ENV
         value: production

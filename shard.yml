@@ -1,4 +1,4 @@
-name: lucky_jumpstart
+name: invidious_lucky_prototype
 version: 0.1.0
 
 authors:
@@ -6,7 +6,7 @@ authors:
 
 targets:
   webserver:
-    main: src/lucky_jumpstart.cr
+    main: src/invidious_lucky_prototype.cr
 
 crystal: 1.1.0
 

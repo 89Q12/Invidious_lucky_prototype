@@ -33,7 +33,7 @@ class Shared::Navbar < BaseComponent
   end
 
   private def render_logo
-    link "Lucky Jumpstart", to: Home::Index, class: "leading-8 font-extrabold tracking-tight text-gray-900 text-xl sm:leading-10 hover:text-gray-600"
+    link "Invidious Lucky Prototype", to: Home::Index, class: "leading-8 font-extrabold tracking-tight text-gray-900 text-xl sm:leading-10 hover:text-gray-600"
   end
 
   private def render_hamburger_icon
