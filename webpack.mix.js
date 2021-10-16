@@ -44,6 +44,7 @@ mix
   // More info and options (like React support) here:
   // https://github.com/JeffreyWay/laravel-mix/blob/master/docs/mixjs.md
   .ts("src/js/app.ts", "js/app.js")
+  .postCss("src/css/app.css", "css")
   .options({
     // If you want to process images, change this to true and add options from
     // https://github.com/tcoopman/image-webpack-loader
