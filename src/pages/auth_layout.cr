@@ -1,27 +1,41 @@
 abstract class AuthLayout
   include Lucky::HTMLPage
 
+  needs dark_mode : String = "dark"
+  needs banner : String = ""
+  needs assert_commits : String
+
   abstract def content
   abstract def page_title
-
-  # The default page title. It is passed to `Shared::LayoutHead`.
-  #
-  # Add a `page_title` method to pages to override it. You can also remove
-  # This method so every page is required to have its own page title.
-  def page_title
-    "Welcome"
-  end
 
   def render
     html_doctype
 
     html lang: "en" do
-      mount Shared::LayoutHead, page_title: page_title
+      mount Shared::LayoutHead, commits: assert_commits, page_title: page_title
 
-      body do
-        mount Shared::Navbar, simple: true
-        mount Shared::FlashMessages, context.flash
-        content
+      body class: "#{dark_mode}-theme" do
+        div class: "pure-g" do
+          div class: "pure-u-1 pure-u-md-2-24", id: "contents" do
+            mount Shared::Navbar, darktheme: false
+            unless banner
+              div class: "h-box" do
+                h3 banner
+              end
+            end
+            main do
+              div class: "pure-u-1 pure-u-md-20-24" do
+                content
+              end
+            end
+            footer do
+              div class: "pure-g" do
+                mount Shared::Footer
+              end
+            end
+          end
+          div class: "pure-u-1 pure-u-md-2-24"
+        end
       end
     end
   end
