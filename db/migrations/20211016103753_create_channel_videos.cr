@@ -13,7 +13,6 @@ class CreateChannelVideos::V20211016103753 < Avram::Migrator::Migration::V1
       add views : Int64
       add_timestamps
     end
-    
   end
 
   def rollback
