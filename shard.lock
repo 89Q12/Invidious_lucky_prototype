@@ -56,6 +56,10 @@ shards:
     git: https://github.com/crystal-community/jwt.git
     version: 1.5.1
 
+  lsquic:
+    git: https://github.com/iv-org/lsquic.cr.git
+    version: 2.23.1
+
   lucky:
     git: https://github.com/luckyframework/lucky.git
     version: 0.28.0
