@@ -1,3 +1,4 @@
+# this reflects the header section from templacte ecr
 class Shared::LayoutHead < BaseComponent
   needs page_title : String
   needs assert_commits : String
