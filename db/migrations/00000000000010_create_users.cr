@@ -11,7 +11,7 @@ class CreateUsers::V00000000000010 < Avram::Migrator::Migration::V1
       add token : String
       add watched : Array(String)
       add feed_needs_update : Bool
-      add column admin : Bool = false
+      add admin : Bool = false
     end
   end
 
