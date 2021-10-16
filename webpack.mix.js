@@ -9,7 +9,6 @@
 
 let mix = require("laravel-mix");
 let plugins = [];
-const tailwindcss = require("tailwindcss");
 
 // Customize the notifier to be less noisy
 let WebpackNotifierPlugin = require("webpack-notifier");
@@ -45,10 +44,6 @@ mix
   // More info and options (like React support) here:
   // https://github.com/JeffreyWay/laravel-mix/blob/master/docs/mixjs.md
   .ts("src/js/app.ts", "js/app.js")
-  // SASS entry file. Uses autoprefixer automatically.
-  .postCss("src/css/app.css", "css", [require("tailwindcss")])
-  // Customize postCSS:
-  // https://github.com/JeffreyWay/laravel-mix/blob/master/docs/css-preprocessors.md#postcss-plugins
   .options({
     // If you want to process images, change this to true and add options from
     // https://github.com/tcoopman/image-webpack-loader
