@@ -1,6 +1,6 @@
 class User < BaseModel
   include Authentic::PasswordAuthenticatable
-
+  # this class reflects users.sql
   table do
     column userid : String
     column encrypted_password : String
