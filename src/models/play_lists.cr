@@ -5,11 +5,11 @@ class PlayLists < BaseModel
     Private
   end
   table do
-    title : String
-    author : String
-    description : String
-    video_count : Int32
-    privacy : PlayLists::Privacy
-    index : Int32
+    column title : String
+    column author : String
+    column description : String
+    column video_count : Int32
+    column privacy : PlayLists::Privacy
+    column index : Int32
   end
 end

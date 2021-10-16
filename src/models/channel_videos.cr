@@ -1,13 +1,13 @@
 class ChannelVideos < BaseModel
   # this class reflects channel_videos.sql
   table do
-    title : String
-    published : Time
-    ucid : String
-    author : String
-    lenght_seconds : Int32
-    live_now : Bool
-    premiere_timestamp : Time
-    views : Int64
+    column title : String
+    column published : Time
+    column ucid : String
+    column author : String
+    column lenght_seconds : Int32
+    column live_now : Bool
+    column premiere_timestamp : Time
+    column views : Int64
   end
 end

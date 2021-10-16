@@ -1,12 +1,12 @@
 class PlayListVideos < BaseModel
   table do
-    title : String
-    author : String
-    ucid : String
-    length_seconds : Int32
-    published : Time
-    belongs_to plid : PlayLists
-    index : Int32
-    live_now : Bool
+    column title : String
+    column author : String
+    column ucid : String
+    column length_seconds : Int32
+    column published : Time
+    column belongs_to plid : PlayLists
+    column index : Int32
+    column live_now : Bool
   end
 end

@@ -1,7 +1,7 @@
 class Channels < BaseModel
   table do
-    author : String
-    deleted : Bool = false
-    subscribed : Time
+    column author : String
+    column deleted : Bool = false
+    column subscribed : Time
   end
 end
