@@ -1,1 +1,4 @@
-@import "../../public/css/*";
+@import "../../public/css/pure-min.css";
+@import "../../public/css/grids-responsive-min.css";
+@import "../../public/css/ionicons.min.css";
+@import "../../public/css/default.css";
