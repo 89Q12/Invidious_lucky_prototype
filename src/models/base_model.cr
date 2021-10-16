@@ -3,8 +3,9 @@ abstract class BaseModel < Avram::Model
     AppDatabase
   end
 
+  # Default columns that every table has, makes it easier
   macro default_columns
     primary_key id : UUID
-    timestamps
+    timestamps # this macro includes created_at and updated_at
   end
 end
