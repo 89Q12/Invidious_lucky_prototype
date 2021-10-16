@@ -2,7 +2,7 @@ class CreateChannelVideos::V20211016103753 < Avram::Migrator::Migration::V1
   def migrate
     # Learn about migrations at: https://luckyframework.org/guides/database/migrations
     create table_for(ChannelVideos) do
-      primary_key id : Int64
+      primary_key id : UUID
       add title : String
       add published : Time
       add ucid : String, index: true
