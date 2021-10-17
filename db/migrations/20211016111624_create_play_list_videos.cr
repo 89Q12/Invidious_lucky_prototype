@@ -8,7 +8,6 @@ class CreatePlayListVideos::V20211016111624 < Avram::Migrator::Migration::V1
       add ucid : String
       add length_seconds : Int32
       add published : Time
-      add_belongs_to pl : PlayLists, on_delete: :cascade
       add index : Int32
       add live_now : Bool
       add_timestamps
