@@ -11,6 +11,10 @@ But this isn't the goal of this project because this projects only goal is to gi
 Maybe it can give the original project a jumpstart when they decide to use lucky.
 
 # Things that work
+Basic pages sort of work now
+  - feed/popular (No content but navbar etc works)
+  - feed_menu shows popular/trending
+  - signin can display the login form but auth doenst work atm
+  - footer works
 
-None
-Does not build
+It builds
