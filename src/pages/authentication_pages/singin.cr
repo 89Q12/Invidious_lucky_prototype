@@ -1,4 +1,4 @@
-class Authentication::SingIn < AuthLayout
+class Authentication::SignIn < AuthLayout
   needs operation : SignInUser
 
   def page_title
