@@ -5,10 +5,10 @@ class Authentication::CreateUser < BrowserAction
     SignUpUser.create(params) do |operation, user|
       if user
         flash.info = "Thanks for signing up."
-        redirect Login
+        redirect Authentication::SignIn
       else
         flash.info = "Couldn't sign you up"
-        html SinUp, operation: operation
+        html Authentication::SinUp, operation: operation
       end
     end
   end
