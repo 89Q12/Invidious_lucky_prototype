@@ -14,7 +14,7 @@ Maybe it can give the original project a jumpstart when they decide to use lucky
 Basic pages sort of work now
   - feed/popular (No content but navbar etc works)
   - feed_menu shows popular/trending
-  - signin can display the login form but auth doenst work atm
+  - signin can display the login form but auth doesn't work atm
   - footer works
 
 It builds
