@@ -15,7 +15,7 @@ abstract class MainLayout
     html_doctype
 
     html lang: "en" do
-      mount Shared::LayoutHead, commits: assert_commits, page_title: page_title
+      mount Shared::LayoutHead, assert_commits: assert_commits, page_title: page_title
 
       body class: "#{dark_mode}-theme" do
         div class: "pure-g" do
