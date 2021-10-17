@@ -26,7 +26,7 @@ class Shared::Navbar < BaseComponent
   end
 
   private def render_logo
-    link "Invidious Lucky Prototype", to: Home::Index, class: "index-link pure-menu-heading"
+    link "Invidious Lucky Prototype", to: Feed::Index, class: "index-link pure-menu-heading"
   end
 
   private def render_right_navbar(user : User, dark_theme : Bool | Nil)

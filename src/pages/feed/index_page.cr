@@ -1,6 +1,6 @@
-class Dashboard::IndexPage < MainLayout
+class Feed::IndexPage < MainLayout
   def page_title
-    "Dashboard"
+    "Invidous"
   end
 
   def content

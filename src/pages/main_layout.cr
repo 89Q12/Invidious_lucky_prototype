@@ -7,6 +7,8 @@ abstract class MainLayout
   needs dark_mode : String = "dark"
   needs banner : String = ""
   needs assert_commits : String
+  needs version_string : String
+  needs modified_source_code_url : String
 
   abstract def content
   abstract def page_title
@@ -33,7 +35,7 @@ abstract class MainLayout
             end
             footer do
               div class: "pure-g" do
-                mount Shared::Footer
+                mount Shared::Footer, modified_source_code_url: modified_source_code_url, version_string: version_string
               end
             end
           end
