@@ -5,10 +5,10 @@ class Authentication::Login < BrowserAction
     SignInUser.run(params) do |operation, authenticated_user|
       if authenticated_user
         sign_in(authenticated_user)
-        Authentic.redirect_to_originally_requested_path(self, fallback: Home::Index)
+        Authentic.redirect_to_originally_requested_path(self, fallback: Feed::Index)
       else
         flash.failure = "Sign in failed"
-        html NewPage, operation: operation
+        html Authentication::SignIn, operation: operation
       end
     end
   end
