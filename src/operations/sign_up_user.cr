@@ -14,6 +14,6 @@ class SignUpUser < User::SaveOperation
   end
 
   private def assign_confirmation_token
-    confirmation_token.value = Random::Secure.urlsafe_base64(32)
+    token.value = Random::Secure.urlsafe_base64(32)
   end
 end

@@ -3,7 +3,7 @@ abstract class MainLayout
 
   # 'needs current_user : User' makes it so that the current_user
   # is always required for pages using MainLayout
-  needs current_user : User
+  needs current_user : User?
   needs dark_mode : String = "dark"
   needs banner : String = ""
   needs assert_commits : String
@@ -21,23 +21,18 @@ abstract class MainLayout
 
       body class: "#{dark_mode}-theme" do
         div class: "pure-g" do
-          div class: "pure-u-1 pure-u-md-2-24", id: "contents" do
-            mount Shared::Navbar, user: current_user, darktheme: false
+          div class: "pure-u-1 pure-u-md-2-24"
+          div class: "pure-u-1 pure-u-md-20-24", id: "contents" do
+            unless current_user
+              mount Shared::Navbar, user: current_user, darktheme: false
+            end
             unless banner
               div class: "h-box" do
                 h3 banner
               end
             end
-            main do
-              div class: "pure-u-1 pure-u-md-20-24" do
-                content
-              end
-            end
-            footer do
-              div class: "pure-g" do
-                mount Shared::Footer, modified_source_code_url: modified_source_code_url, version_string: version_string
-              end
-            end
+            content
+            mount Shared::Footer, modified_source_code_url: modified_source_code_url, version_string: version_string
           end
           div class: "pure-u-1 pure-u-md-2-24"
         end

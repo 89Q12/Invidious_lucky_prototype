@@ -1,13 +1,13 @@
 module Auth::RedirectSignedInUsers
   macro included
-    include Auth::AllowGuests
+    #include Auth::AllowGuests
     before redirect_signed_in_users
   end
 
   private def redirect_signed_in_users
     if current_user?
       flash.success = "You are already signed in"
-      redirect to: Home::Index
+      redirect to: Feed::Index
     else
       continue
     end

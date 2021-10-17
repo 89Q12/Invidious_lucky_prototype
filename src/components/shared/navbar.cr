@@ -5,10 +5,8 @@ class Shared::Navbar < BaseComponent
 
   def render
     div class: "pure-g navbar h-box" do
-      div class: "flex justify-between items-center h-16" do
-        render_left_navbar(search)
-        render_right_navbar(user, darktheme)
-      end
+      render_left_navbar(search)
+      render_right_navbar(user, darktheme)
     end
   end
 
@@ -40,28 +38,41 @@ class Shared::Navbar < BaseComponent
           end
         end
       end
-      div class: "pure-u-1-4" do
-        a class: "pure-menu-heading", title: "Subscriptions", id: "notification_ticker" do
-          unless user.nil?
-            notification_count = user.notifications.size
-            if notification_count > 0
-              div id: "notification_count" do
-                text notification_count
-              end
-              i class: "icon ion-ios-notifications"
-            else
-              i class: "icon ion-ios-notifications-outline"
+    end
+    div class: "pure-u-1-4" do
+      a class: "pure-menu-heading", title: "Subscriptions", id: "notification_ticker" do
+        unless user.nil?
+          notification_count = user.notifications.size
+          if notification_count > 0
+            div id: "notification_count" do
+              text notification_count
             end
+            i class: "icon ion-ios-notifications"
+          else
+            i class: "icon ion-ios-notifications-outline"
           end
         end
-        mount UI::Button, &.link("Log Out", to: Authentication::Logout, flow_id: "nav-sign-out-button")
       end
+    end
+    div class: "pure-u-1-4" do
+      link("Log Out", to: Authentication::Logout, flow_id: "nav-sign-out-button")
     end
   end
 
   private def render_right_navbar(no_user : Nil, dark_theme : Bool | Nil)
     div class: "pure-u-1 pure-u-md-8-24 user-field" do
-      mount UI::Button, &.link("Login", to: Authentication::NewLogin, flow_id: "nav-sign-in-button")
+      div class: "pure-u-1-4" do
+        a id: "toggle_theme", href: "/toggle_theme?referer=", class: "pure-menu-heading" do
+          if dark_theme
+            i class: "icon ion-ios-sunny"
+          else
+            i class: "icon ion-ios-moon"
+          end
+        end
+      end
+      div class: "pure-u-1-4" do
+        link("Login", to: Authentication::NewLogin, flow_id: "nav-sign-in-button")
+      end
     end
   end
 end

@@ -5,7 +5,7 @@ class PlayListVideos < BaseModel
     column ucid : String
     column length_seconds : Int32
     column published : Time
-    belongs_to plid : PlayLists
+    has_one plid : PlayLists
     column index : Int32
     column live_now : Bool
   end

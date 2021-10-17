@@ -9,7 +9,7 @@ module Auth::RequireSignIn
     else
       Authentic.remember_requested_path(self)
       flash.info = "Please sign in first"
-      redirect to: SignIns::New
+      redirect to: Authentication::NewLogin
     end
   end
 

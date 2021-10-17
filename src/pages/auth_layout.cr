@@ -18,23 +18,16 @@ abstract class AuthLayout
 
       body class: "#{dark_mode}-theme" do
         div class: "pure-g" do
-          div class: "pure-u-1 pure-u-md-2-24", id: "contents" do
+          div class: "pure-u-1 pure-u-md-2-24"
+          div class: "pure-u-1 pure-u-md-20-24", id: "contents" do
             mount Shared::Navbar, darktheme: false
             unless banner
               div class: "h-box" do
                 h3 banner
               end
             end
-            main do
-              div class: "pure-u-1 pure-u-md-20-24" do
-                content
-              end
-            end
-            footer do
-              div class: "pure-g" do
-                mount Shared::Footer, modified_source_code_url: modified_source_code_url, version_string: version_string
-              end
-            end
+            content
+            mount Shared::Footer, modified_source_code_url: modified_source_code_url, version_string: version_string
           end
           div class: "pure-u-1 pure-u-md-2-24"
         end

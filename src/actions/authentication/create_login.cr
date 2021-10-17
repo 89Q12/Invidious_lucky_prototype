@@ -8,7 +8,7 @@ class Authentication::Login < BrowserAction
         Authentic.redirect_to_originally_requested_path(self, fallback: Feed::Index)
       else
         flash.failure = "Sign in failed"
-        html Authentication::SignIn, operation: operation
+        html Authentication::SignIn, operation: operation, assert_commits: "", modified_source_code_url: "modified_source_code_url", version_string: "version_string"
       end
     end
   end

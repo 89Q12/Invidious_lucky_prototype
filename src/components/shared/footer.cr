@@ -58,11 +58,15 @@ class Shared::Footer < BaseComponent
       end
       span do
         i class: "icon ion-logo-javascript"
-        link "View JavaScript license information.", Feed::JsLincense
+        a href: "/licenses" do
+          text "View JavaScript license information."
+        end
       end
       span do
         i class: "icon ion-ios-paper"
-        link "View privacy policy.", Feed::Privacy
+        a href: "/privacy" do
+          text "View privacy policy."
+        end
       end
     end
   end
