@@ -12,7 +12,7 @@ class Authentication::SignUp < AuthLayout
   private def render_form(op)
     form_for Authentication::CreateUser do
       div class: "space-y-6" do
-        mount Shared::Field, op.userid, "Username", &.email_input(autofocus: "true", placeholder: "you@example.com")
+        mount Shared::Field, op.userid, "Username", &.text_input(autofocus: "true", placeholder: "Username")
         mount Shared::Field, op.password, "Password", &.password_input(placeholder: "*" * 12)
         mount Shared::Field, op.password_confirmation, "Confirm Password", &.password_input(placeholder: "*" * 12)
       end
