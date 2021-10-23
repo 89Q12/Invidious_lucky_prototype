@@ -4,12 +4,12 @@ class User < BaseModel
   table do
     column userid : String
     column encrypted_password : String
-    column notifications : Array(String)
-    column subscriptions : Array(String)
-    column preferences : String
+    column notifications : Array(String) = Array(String).new
+    column subscriptions : Array(String) = Array(String).new
+    column preferences : String?
     column token : String
-    column watched : Array(String)
-    column feed_needs_update : Bool
+    column watched : Array(String) = Array(String).new
+    column feed_needs_update : Bool = false
     column admin : Bool = false
   end
 end
