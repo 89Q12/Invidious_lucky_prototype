@@ -38,24 +38,24 @@ class Shared::Navbar < BaseComponent
           end
         end
       end
-    end
-    div class: "pure-u-1-4" do
-      a class: "pure-menu-heading", title: "Subscriptions", id: "notification_ticker" do
-        unless user.nil?
-          notification_count = user.notifications.size
-          if notification_count > 0
-            div id: "notification_count" do
-              text notification_count
+      div class: "pure-u-1-4" do
+        a class: "pure-menu-heading", title: "Subscriptions", id: "notification_ticker" do
+          unless user.nil?
+            notification_count = user.notifications.size
+            if notification_count > 0
+              div id: "notification_count" do
+                text notification_count
+              end
+              i class: "icon ion-ios-notifications"
+            else
+              i class: "icon ion-ios-notifications-outline"
             end
-            i class: "icon ion-ios-notifications"
-          else
-            i class: "icon ion-ios-notifications-outline"
           end
         end
       end
-    end
-    div class: "pure-u-1-4" do
-      link("Log Out", to: Authentication::Logout, flow_id: "nav-sign-out-button")
+      div class: "pure-u-1-4" do
+        link("Log Out", to: Authentication::Logout, flow_id: "nav-sign-out-button")
+      end
     end
   end
 
@@ -69,9 +69,9 @@ class Shared::Navbar < BaseComponent
             i class: "icon ion-ios-moon"
           end
         end
-      end
-      div class: "pure-u-1-4" do
-        link("Login", to: Authentication::NewLogin, flow_id: "nav-sign-in-button")
+        div class: "pure-u-1-4" do
+          link("Login", to: Authentication::NewLogin, flow_id: "nav-sign-in-button")
+        end
       end
     end
   end
