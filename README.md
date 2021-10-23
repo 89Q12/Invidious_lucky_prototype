@@ -11,6 +11,22 @@ But this isn't the goal of this project because this projects only goal is to gi
 Maybe it can give the original project a jumpstart when they decide to use lucky.
 
 # Things that work
+Basic pages sort of work now
+  - feed/popular (No content but navbar etc works)
+  - feed_menu shows popular/trending
+  - signin can display the login form but auth doesn't work atm
+  - footer works
 
-None
-Does not build
+It builds
+# Roadmap
+-  get authentication working
+-  get preferences to load and be changeable
+-  get search field styled
+-  get the original yt_backend code to work
+-  get seach to work
+-  get trending to work
+-  get video playing to work
+-  get subscribe/unsubcribe to work
+-  get channel refresh jobs to work
+-  get notifications to work
+-  get feed to work
