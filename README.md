@@ -18,3 +18,15 @@ Basic pages sort of work now
   - footer works
 
 It builds
+# Roadmap
+-  get authencation working
+-  get preferences to load and be changeable
+-  get search field styled
+-  get the original yt_backend code to work
+-  get seach to work
+-  get trending to work
+-  get video playing to work
+-  get subscribe/unsubcribe to work
+-  get channel refresh jobs to work
+-  get notifications to work
+-  get feed to work
