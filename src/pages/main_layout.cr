@@ -23,9 +23,7 @@ abstract class MainLayout
         div class: "pure-g" do
           div class: "pure-u-1 pure-u-md-2-24"
           div class: "pure-u-1 pure-u-md-20-24", id: "contents" do
-            unless current_user
-              mount Shared::Navbar, user: current_user, darktheme: false
-            end
+            mount Shared::Navbar, user: current_user, darktheme: false
             unless banner
               div class: "h-box" do
                 h3 banner
