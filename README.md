@@ -19,7 +19,7 @@ Basic pages sort of work now
 
 It builds
 # Roadmap
--  get authentication working
+-  get authentication working Done
 -  get preferences to load and be changeable
 -  get search field styled
 -  get the original yt_backend code to work
