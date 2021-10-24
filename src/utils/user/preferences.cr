@@ -1,8 +1,8 @@
-struct Preferences
+struct GenPreferences
   include JSON::Serializable
   include YAML::Serializable
 
-  property annotations : Bool = CONFIG.default_user_preferences.annotations
+  property annotations : Bool = ("default_user_preferences.annotations")
   property annotations_subscribed : Bool = CONFIG.default_user_preferences.annotations_subscribed
   property autoplay : Bool = CONFIG.default_user_preferences.autoplay
   property automatic_instance_redirect : Bool = CONFIG.default_user_preferences.automatic_instance_redirect
