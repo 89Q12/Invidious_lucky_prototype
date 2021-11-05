@@ -15,7 +15,7 @@ class AddRelationUserPreferences::V20211024101131 < Avram::Migrator::Migration::
     #
     # execute "CREATE UNIQUE INDEX things_title_index ON things (title);"
     alter table_for(Users) do
-      add_belongs_to preferences : Preferences, on_delete: :cascade, foreign_key_type: UUID
+      add_belongs_to id_pf : UserPreferences, on_delete: :cascade, foreign_key_type: UUID
     end
   end
 

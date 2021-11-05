@@ -7,6 +7,7 @@ class CreateUsers::V00000000000010 < Avram::Migrator::Migration::V1
       add encrypted_password : String
       add notifications : Array(String)
       add subscriptions : Array(String)
+      add id_pf : Int64
       add token : String
       add watched : Array(String)
       add feed_needs_update : Bool

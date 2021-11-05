@@ -6,7 +6,7 @@ class User < BaseModel
     column encrypted_password : String
     column notifications : Array(String) = Array(String).new
     column subscriptions : Array(String) = Array(String).new
-    has_one preferences : Preferences
+    has_one id_pf : UserPreferences
     column token : String
     column watched : Array(String) = Array(String).new
     column feed_needs_update : Bool = false
