@@ -15,12 +15,12 @@
     "prod": "yarn run mix --production"
   },
   "devDependencies": {
-    "@babel/compat-data": "^7.15.0",
-    "@types/node": "^16.11.4",
+    "@babel/compat-data": "^7.16.0",
+    "@types/node": "^16.11.6",
     "@types/webpack-env": "^1.16.3",
     "@typescript-eslint/eslint-plugin": "^4.33.0",
     "@typescript-eslint/parser": "^4.33.0",
-    "browser-sync": "^2.27.5",
+    "browser-sync": "^2.27.7",
     "compression-webpack-plugin": "^9.0.0",
     "eslint": "^7.32.0",
     "laravel-mix": "^6.0.34",
