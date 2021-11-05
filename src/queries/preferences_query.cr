@@ -1,2 +1,2 @@
-class PreferencesQuery < Preferences::BaseQuery
+class UserPreferencesQuery < UserPreferences::BaseQuery
 end

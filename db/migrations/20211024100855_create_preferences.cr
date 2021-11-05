@@ -1,7 +1,7 @@
-class CreatePreferences::V20211024100855 < Avram::Migrator::Migration::V1
+class CreateUserPreferences::V20211024100855 < Avram::Migrator::Migration::V1
   def migrate
     # Learn about migrations at: https://luckyframework.org/guides/database/migrations
-    create table_for(Preferences) do
+    create table_for(UserPreferences) do
       primary_key id : UUID
       add_timestamps
       add locale : String

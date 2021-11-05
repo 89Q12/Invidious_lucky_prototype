@@ -1,4 +1,4 @@
-class Preferences < BaseModel
+class UserPreferences < BaseModel
   enum FeedMenu
     Popular
     Trending
@@ -24,19 +24,19 @@ class Preferences < BaseModel
     column captions : Array(String) = ["", "", ""]
     column dark_mode : Bool = false
     column thin_mode : Bool = false
-    column feed_menu : Preferences::FeedMenu
-    column default_home : Preferences::FeedMenu
+    column feed_menu : UserPreferences::FeedMenu
+    column default_home : UserPreferences::FeedMenu
     column max_results : Int16 = 40
     column annotations : Bool = false
     column annotations_subscribed : Bool = false
-    column comments : Preferences::Comments
-    column player_style : Preferences::PlayerStyle
+    column comments : UserPreferences::Comments
+    column player_style : UserPreferences::PlayerStyle
     column related_videos : Bool = true
     column autoplay : Bool = false
     column continue : Bool = false
     column listen : Bool = false
     column video_loop : Bool = false
-    column quality : Preferences::VideoQuality
+    column quality : UserPreferences::VideoQuality
     column quality_dash : String = "auto"
     column speed : Float64 = 1.0
     column volume : Int16 = 100
