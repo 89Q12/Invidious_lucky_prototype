@@ -1,5 +1,9 @@
 # Invidious prototype with the Lucky framework
 
+**IMPORTANT**
+
+Developement ceased due to missing or incomplete documentation and due to lack of time!
+
 Since the invidious project might wanna switch to a diffrent framework I wanna build prototype with the lucky framework just to give some insights.
 This repo is using this [template](https://github.com/stephendolan/lucky_jumpstart/) the readme can be found [here](https://github.com/11Tuvork28/Invidious_lucky_prototype/blob/main/README_TEMPLATE.md)
 The invidious readme can be found [here](https://github.com/iv-org/invidious/blob/master/README.md) and the original code can be found in this [repo](https://github.com/iv-org/invidious/)
